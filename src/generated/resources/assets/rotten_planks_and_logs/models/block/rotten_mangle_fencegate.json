@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "rotten_planks_and_logs:block/rotten_mangle_planks"
+  }
+}

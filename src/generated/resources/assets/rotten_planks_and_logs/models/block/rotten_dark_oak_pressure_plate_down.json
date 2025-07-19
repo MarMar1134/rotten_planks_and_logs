@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "rotten_planks_and_logs:block/rotten_dark_oak_planks"
+  }
+}

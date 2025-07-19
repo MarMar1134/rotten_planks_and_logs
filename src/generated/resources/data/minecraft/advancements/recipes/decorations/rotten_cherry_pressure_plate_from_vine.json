@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rotten_cherry_pressure_plate_from_vine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_and_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cherry_pressure_plate"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:vine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_wood_and_vine",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rotten_cherry_pressure_plate_from_vine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

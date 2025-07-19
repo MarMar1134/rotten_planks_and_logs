@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "rotten_planks_and_logs:block/rotten_birch_log",
+    "side": "rotten_planks_and_logs:block/rotten_birch_log"
+  }
+}

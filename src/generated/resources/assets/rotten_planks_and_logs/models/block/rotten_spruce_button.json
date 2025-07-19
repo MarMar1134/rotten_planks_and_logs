@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "rotten_planks_and_logs:block/rotten_spruce_planks"
+  }
+}

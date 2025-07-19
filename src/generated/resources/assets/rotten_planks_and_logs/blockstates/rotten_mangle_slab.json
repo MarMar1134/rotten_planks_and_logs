@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rotten_planks_and_logs:block/rotten_mangle_slab"
+    },
+    "type=double": {
+      "model": "rotten_planks_and_logs:block/rotten_mangle_planks"
+    },
+    "type=top": {
+      "model": "rotten_planks_and_logs:block/rotten_mangle_slab_top"
+    }
+  }
+}

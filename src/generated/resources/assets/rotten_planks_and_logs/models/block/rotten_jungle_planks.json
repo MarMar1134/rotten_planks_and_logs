@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "rotten_planks_and_logs:block/rotten_jungle_planks"
+  }
+}

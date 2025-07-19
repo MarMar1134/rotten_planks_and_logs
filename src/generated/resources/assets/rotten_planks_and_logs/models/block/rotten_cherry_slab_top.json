@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "rotten_planks_and_logs:block/rotten_cherry_planks",
+    "side": "rotten_planks_and_logs:block/rotten_cherry_planks",
+    "top": "rotten_planks_and_logs:block/rotten_cherry_planks"
+  }
+}

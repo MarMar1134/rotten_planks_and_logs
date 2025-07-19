@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "rotten_planks_and_logs:rotten_birch_fencegate"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "rotten_planks_and_logs:blocks/rotten_birch_fencegate"
+}
