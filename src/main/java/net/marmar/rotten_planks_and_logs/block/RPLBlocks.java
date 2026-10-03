@@ -43,7 +43,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_ACACIA_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_ACACIA_FENCE = registerBlockWithItem("rotten_acacia_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_ACACIA_FENCEGATE = registerBlockWithItem("rotten_acacia_fencegate",
+    public static final RegistryObject<Block> ROTTEN_ACACIA_FENCE_GATE = registerBlockWithItem("rotten_acacia_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_ACACIA_DOOR = registerBlockWithItem("rotten_acacia_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_DOOR).noOcclusion(), BlockSetType.ACACIA));
@@ -63,7 +63,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_BAMBOO_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_BAMBOO_FENCE = registerBlockWithItem("rotten_bamboo_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_BAMBOO_FENCEGATE = registerBlockWithItem("rotten_bamboo_fencegate",
+    public static final RegistryObject<Block> ROTTEN_BAMBOO_FENCE_GATE = registerBlockWithItem("rotten_bamboo_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_BAMBOO_DOOR = registerBlockWithItem("rotten_bamboo_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_DOOR).noOcclusion(), BlockSetType.BAMBOO));
@@ -91,7 +91,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_BIRCH_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_BIRCH_FENCE = registerBlockWithItem("rotten_birch_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_BIRCH_FENCEGATE = registerBlockWithItem("rotten_birch_fencegate",
+    public static final RegistryObject<Block> ROTTEN_BIRCH_FENCE_GATE = registerBlockWithItem("rotten_birch_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_BIRCH_DOOR = registerBlockWithItem("rotten_birch_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_DOOR).noOcclusion(), BlockSetType.BIRCH));
@@ -119,7 +119,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_CHERRY_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_CHERRY_FENCE = registerBlockWithItem("rotten_cherry_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_CHERRY_FENCEGATE = registerBlockWithItem("rotten_cherry_fencegate",
+    public static final RegistryObject<Block> ROTTEN_CHERRY_FENCE_GATE = registerBlockWithItem("rotten_cherry_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_CHERRY_DOOR = registerBlockWithItem("rotten_cherry_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_DOOR).noOcclusion(), BlockSetType.CHERRY));
@@ -147,7 +147,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_DARK_OAK_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_DARK_OAK_FENCE = registerBlockWithItem("rotten_dark_oak_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_DARK_OAK_FENCEGATE = registerBlockWithItem("rotten_dark_oak_fencegate",
+    public static final RegistryObject<Block> ROTTEN_DARK_OAK_FENCE_GATE = registerBlockWithItem("rotten_dark_oak_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_DARK_OAK_DOOR = registerBlockWithItem("rotten_dark_oak_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_DOOR).noOcclusion(), BlockSetType.DARK_OAK));
@@ -175,7 +175,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_JUNGLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_JUNGLE_FENCE = registerBlockWithItem("rotten_jungle_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_JUNGLE_FENCEGATE = registerBlockWithItem("rotten_jungle_fencegate",
+    public static final RegistryObject<Block> ROTTEN_JUNGLE_FENCE_GATE = registerBlockWithItem("rotten_jungle_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_JUNGLE_DOOR = registerBlockWithItem("rotten_jungle_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_DOOR).noOcclusion(), BlockSetType.JUNGLE));
@@ -203,7 +203,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_MANGROVE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_MANGROVE_FENCE = registerBlockWithItem("rotten_mangrove_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_MANGROVE_FENCEGATE = registerBlockWithItem("rotten_mangrove_fencegate",
+    public static final RegistryObject<Block> ROTTEN_MANGROVE_FENCE_GATE = registerBlockWithItem("rotten_mangrove_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_MANGROVE_DOOR = registerBlockWithItem("rotten_mangrove_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_DOOR).noOcclusion(), BlockSetType.MANGROVE));
@@ -231,7 +231,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_SPRUCE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_SPRUCE_FENCE = registerBlockWithItem("rotten_spruce_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_SPRUCE_FENCEGATE = registerBlockWithItem("rotten_spruce_fencegate",
+    public static final RegistryObject<Block> ROTTEN_SPRUCE_FENCE_GATE = registerBlockWithItem("rotten_spruce_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_SPRUCE_DOOR = registerBlockWithItem("rotten_spruce_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_DOOR).noOcclusion(), BlockSetType.SPRUCE));
@@ -259,7 +259,7 @@ public class RPLBlocks {
             () -> new StairBlock(() -> ROTTEN_OAK_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> ROTTEN_OAK_FENCE = registerBlockWithItem("rotten_oak_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ROTTEN_OAK_FENCEGATE = registerBlockWithItem("rotten_oak_fencegate",
+    public static final RegistryObject<Block> ROTTEN_OAK_FENCE_GATE = registerBlockWithItem("rotten_oak_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ROTTEN_OAK_DOOR = registerBlockWithItem("rotten_oak_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion(), BlockSetType.OAK));

@@ -26,7 +26,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_ACACIA_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_ACACIA_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_ACACIA_FENCE, RPLBlocks.ROTTEN_ACACIA_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_ACACIA_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_ACACIA_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_ACACIA_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_ACACIA_TRAPDOOR);
@@ -39,7 +39,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_BAMBOO_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_BAMBOO_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_BAMBOO_FENCE, RPLBlocks.ROTTEN_BAMBOO_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_BAMBOO_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_BAMBOO_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_BAMBOO_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_BAMBOO_TRAPDOOR);
@@ -52,7 +52,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_BIRCH_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_BIRCH_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_BIRCH_FENCE, RPLBlocks.ROTTEN_BIRCH_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_BIRCH_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_BIRCH_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_BIRCH_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_BIRCH_TRAPDOOR);
@@ -65,7 +65,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_CHERRY_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_CHERRY_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_CHERRY_FENCE, RPLBlocks.ROTTEN_CHERRY_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_CHERRY_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_CHERRY_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_CHERRY_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_CHERRY_TRAPDOOR);
@@ -78,7 +78,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_DARK_OAK_FENCE, RPLBlocks.ROTTEN_DARK_OAK_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_DARK_OAK_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_DARK_OAK_TRAPDOOR);
@@ -91,7 +91,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_JUNGLE_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_JUNGLE_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_JUNGLE_FENCE, RPLBlocks.ROTTEN_JUNGLE_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_JUNGLE_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_JUNGLE_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_JUNGLE_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_JUNGLE_TRAPDOOR);
@@ -104,7 +104,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_MANGROVE_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_MANGROVE_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_MANGROVE_FENCE, RPLBlocks.ROTTEN_MANGROVE_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_MANGROVE_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_MANGROVE_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_MANGROVE_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_MANGROVE_TRAPDOOR);
@@ -117,7 +117,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_SPRUCE_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_SPRUCE_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_SPRUCE_FENCE, RPLBlocks.ROTTEN_SPRUCE_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_SPRUCE_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_SPRUCE_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_SPRUCE_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_SPRUCE_TRAPDOOR);
@@ -130,7 +130,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_OAK_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_OAK_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_OAK_FENCE, RPLBlocks.ROTTEN_OAK_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_OAK_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_OAK_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_OAK_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_OAK_TRAPDOOR);

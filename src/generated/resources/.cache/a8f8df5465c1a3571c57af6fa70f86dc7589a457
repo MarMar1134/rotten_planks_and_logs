@@ -1,7 +1,7 @@
-// 1.20.1	2026-10-03T14:04:57.1988628	Tags for minecraft:block mod id rotten_planks_and_logs
-c30e5dad85ceb784e57a0d9b933c43b7c07e3d5f data/forge/tags/blocks/needs_wood_tool.json
-3c771aa385562635b274d08cc4b53157028f7d1d data/minecraft/tags/blocks/fence_gates.json
-c30e5dad85ceb784e57a0d9b933c43b7c07e3d5f data/minecraft/tags/blocks/mineable/axe.json
+// 1.20.1	2026-10-03T20:37:52.7947177	Tags for minecraft:block mod id rotten_planks_and_logs
+c92c0d2b800e1774a3dbc04852daea5ae1bacb96 data/forge/tags/blocks/needs_wood_tool.json
+a6f0fc3b4352ce345940c77310e105bf221d96c2 data/minecraft/tags/blocks/fence_gates.json
+c92c0d2b800e1774a3dbc04852daea5ae1bacb96 data/minecraft/tags/blocks/mineable/axe.json
 0cdd68b093cbcfba9f9a4ac50f33460dca6dae2c data/minecraft/tags/blocks/wooden_buttons.json
 8fa0b743281e2e5719f8661d9917228fd6c18062 data/minecraft/tags/blocks/wooden_doors.json
 7274d79abf99146e7e1dad4b8bdae31672c0063d data/minecraft/tags/blocks/wooden_fences.json

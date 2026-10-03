@@ -19,7 +19,7 @@ public class EnglishLangProvider extends LanguageProvider {
         addWoodTranslations("cherry", "cherry");
         addWoodTranslations("dark_oak", "dark oak");
         addWoodTranslations("jungle", "jungle");
-        addWoodTranslations("mangle", "mangrove");
+        addWoodTranslations("mangrove", "mangrove");
         addWoodTranslations("spruce", "spruce");
         addWoodTranslations("oak", "oak");
     }
@@ -35,7 +35,7 @@ public class EnglishLangProvider extends LanguageProvider {
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_slab", "Rotten " + pTranslation + " slab");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_stairs", "Rotten " + pTranslation + " stairs");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fence", "Rotten " + pTranslation + " fence");
-        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fencegate", "Rotten " + pTranslation + " fence gate");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fence_gate", "Rotten " + pTranslation + " fence gate");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_door", "Rotten " + pTranslation + " door");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_trapdoor", "Rotten " + pTranslation + " trapdoor");
     }

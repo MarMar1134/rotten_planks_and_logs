@@ -1,13 +1,13 @@
 {
   "values": [
-    "rotten_planks_and_logs:rotten_acacia_fencegate",
-    "rotten_planks_and_logs:rotten_birch_fencegate",
-    "rotten_planks_and_logs:rotten_bamboo_fencegate",
-    "rotten_planks_and_logs:rotten_cherry_fencegate",
-    "rotten_planks_and_logs:rotten_dark_oak_fencegate",
-    "rotten_planks_and_logs:rotten_jungle_fencegate",
-    "rotten_planks_and_logs:rotten_mangrove_fencegate",
-    "rotten_planks_and_logs:rotten_spruce_fencegate",
-    "rotten_planks_and_logs:rotten_oak_fencegate"
+    "rotten_planks_and_logs:rotten_acacia_fence_gate",
+    "rotten_planks_and_logs:rotten_birch_fence_gate",
+    "rotten_planks_and_logs:rotten_bamboo_fence_gate",
+    "rotten_planks_and_logs:rotten_cherry_fence_gate",
+    "rotten_planks_and_logs:rotten_dark_oak_fence_gate",
+    "rotten_planks_and_logs:rotten_jungle_fence_gate",
+    "rotten_planks_and_logs:rotten_mangrove_fence_gate",
+    "rotten_planks_and_logs:rotten_spruce_fence_gate",
+    "rotten_planks_and_logs:rotten_oak_fence_gate"
   ]
 }
