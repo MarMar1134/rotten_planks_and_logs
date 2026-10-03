@@ -35,7 +35,7 @@ public class SpanishLangProvider extends LanguageProvider {
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_slab", "Baldosa de " + pTranslation + " podrida");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_stairs", "Escaleras de " + pTranslation + " podridas");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fence", "Valla de " + pTranslation + " podrida");
-        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fencegate", "Puerta de valla de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fence_gate", "Puerta de valla de " + pTranslation + " podrida");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_door", "Puerta de " + pTranslation + " podrida");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_trapdoor", "Trampilla de " + pTranslation + " podrida");
     }
