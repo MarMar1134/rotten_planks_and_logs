@@ -36,5 +36,7 @@ public class EnglishLangProvider extends LanguageProvider {
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_stairs", "Rotten " + pTranslation + " stairs");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fence", "Rotten " + pTranslation + " fence");
         this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fencegate", "Rotten " + pTranslation + " fence gate");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_door", "Rotten " + pTranslation + " door");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_trapdoor", "Rotten " + pTranslation + " trapdoor");
     }
 }

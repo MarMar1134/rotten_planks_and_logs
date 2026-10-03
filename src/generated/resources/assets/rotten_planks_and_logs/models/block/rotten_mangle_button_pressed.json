@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_pressed",
-  "textures": {
-    "texture": "rotten_planks_and_logs:block/rotten_mangle_planks"
-  }
-}

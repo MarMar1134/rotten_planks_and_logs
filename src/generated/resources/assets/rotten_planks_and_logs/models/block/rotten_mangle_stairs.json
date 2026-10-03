@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "rotten_planks_and_logs:block/rotten_mangle_planks",
-    "side": "rotten_planks_and_logs:block/rotten_mangle_planks",
-    "top": "rotten_planks_and_logs:block/rotten_mangle_planks"
-  }
-}

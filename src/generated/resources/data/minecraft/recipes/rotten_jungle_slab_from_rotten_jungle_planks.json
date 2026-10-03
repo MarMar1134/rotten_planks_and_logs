@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "rotten_planks_and_logs:rotten_jungle_planks"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "rotten_planks_and_logs:rotten_jungle_slab"
+  },
+  "show_notification": true
+}

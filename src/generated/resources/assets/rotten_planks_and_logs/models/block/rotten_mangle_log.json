@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "rotten_planks_and_logs:block/rotten_mangle_log_top",
-    "side": "rotten_planks_and_logs:block/rotten_mangle_log"
-  }
-}

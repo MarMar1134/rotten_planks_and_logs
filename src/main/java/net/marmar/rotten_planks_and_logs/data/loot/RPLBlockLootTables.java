@@ -27,6 +27,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_ACACIA_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_ACACIA_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_ACACIA_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_ACACIA_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_ACACIA_TRAPDOOR.get());
 
         //Bamboo
         this.dropSelf(RPLBlocks.ROTTEN_BAMBOO_PLANKS.get());
@@ -36,6 +38,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_BAMBOO_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_BAMBOO_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_BAMBOO_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_BAMBOO_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_BAMBOO_TRAPDOOR.get());
 
         //Birch
         this.dropSelf(RPLBlocks.ROTTEN_BIRCH_LOG.get());
@@ -49,6 +53,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_BIRCH_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_BIRCH_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_BIRCH_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_BIRCH_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_BIRCH_TRAPDOOR.get());
 
         //Cherry
         this.dropSelf(RPLBlocks.ROTTEN_CHERRY_LOG.get());
@@ -62,6 +68,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_CHERRY_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_CHERRY_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_CHERRY_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_CHERRY_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_CHERRY_TRAPDOOR.get());
 
         //Dark oak
         this.dropSelf(RPLBlocks.ROTTEN_DARK_OAK_LOG.get());
@@ -75,6 +83,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_DARK_OAK_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_DARK_OAK_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_DARK_OAK_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_DARK_OAK_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_DARK_OAK_TRAPDOOR.get());
 
         //Jungle
         this.dropSelf(RPLBlocks.ROTTEN_JUNGLE_LOG.get());
@@ -88,19 +98,23 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_JUNGLE_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_JUNGLE_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_JUNGLE_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_JUNGLE_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_JUNGLE_TRAPDOOR.get());
 
         //Mangle
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_LOG.get());
-        this.dropSelf(RPLBlocks.STRIPPED_ROTTEN_MANGLE_LOG.get());
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_WOOD.get());
-        this.dropSelf(RPLBlocks.STRIPPED_ROTTEN_MANGLE_WOOD.get());
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_PLANKS.get());
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_BUTTON.get());
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_PRESSURE_PLATE.get());
-        this.add(RPLBlocks.ROTTEN_MANGLE_SLAB.get(), this::createSlabItemTable);
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_STAIRS.get());
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_FENCE.get());
-        this.dropSelf(RPLBlocks.ROTTEN_MANGLE_FENCEGATE.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_LOG.get());
+        this.dropSelf(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_LOG.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_WOOD.get());
+        this.dropSelf(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_WOOD.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_PLANKS.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_BUTTON.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_PRESSURE_PLATE.get());
+        this.add(RPLBlocks.ROTTEN_MANGROVE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_STAIRS.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_FENCE.get());
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_MANGROVE_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_MANGROVE_TRAPDOOR.get());
 
         //Spruce
         this.dropSelf(RPLBlocks.ROTTEN_SPRUCE_LOG.get());
@@ -114,6 +128,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_SPRUCE_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_SPRUCE_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_SPRUCE_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_SPRUCE_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_SPRUCE_TRAPDOOR.get());
 
         //Oak
         this.dropSelf(RPLBlocks.ROTTEN_OAK_LOG.get());
@@ -127,6 +143,8 @@ public class RPLBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(RPLBlocks.ROTTEN_OAK_STAIRS.get());
         this.dropSelf(RPLBlocks.ROTTEN_OAK_FENCE.get());
         this.dropSelf(RPLBlocks.ROTTEN_OAK_FENCEGATE.get());
+        this.add(RPLBlocks.ROTTEN_OAK_DOOR.get(), this::createDoorTable);
+        this.dropSelf(RPLBlocks.ROTTEN_OAK_TRAPDOOR.get());
     }
 
     @Override

@@ -19,22 +19,24 @@ public class SpanishLangProvider extends LanguageProvider {
         addWoodTranslations("cherry", "cerezo");
         addWoodTranslations("dark_oak", "roble oscuro");
         addWoodTranslations("jungle", "jungla");
-        addWoodTranslations("mangle", "mangle");
+        addWoodTranslations("mangle", "manglar");
         addWoodTranslations("spruce", "abeto");
         addWoodTranslations("oak", "roble");
     }
 
     private void addWoodTranslations(String pWoodType, String pTranslation){
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_log", "Tronco de " + pTranslation + " podrido");
-        this.add("block.rotten_planks_and_logs.stripped_rotten_" + pWoodType + "_log", "Tronco pelado de " + pTranslation + " podrido");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_wood", "Leño de " + pTranslation + " podrido");
-        this.add("block.rotten_planks_and_logs.stripped_rotten_" + pWoodType + "_wood", "Leño pelado de " + pTranslation + " podrido");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_planks", "Tablones de " + pTranslation + " podridos");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_button", "Botón de " + pTranslation + " podrido");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_pressure_plate", "Placa de presión de " + pTranslation + " podrida");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_slab", "Baldosa de " + pTranslation + " podrida");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_stairs", "Escaleras de " + pTranslation + " podridas");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_fence", "Valla de " + pTranslation + " podrida");
-        this.add("block.rotten_planks_and_logs.rotten_" + pWoodType + "_fencegate", "Puerta de valla de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_log", "Tronco de " + pTranslation + " podrido");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".stripped_rotten_" + pWoodType + "_log", "Tronco pelado de " + pTranslation + " podrido");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_wood", "Leño de " + pTranslation + " podrido");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".stripped_rotten_" + pWoodType + "_wood", "Leño pelado de " + pTranslation + " podrido");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_planks", "Tablones de " + pTranslation + " podridos");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_button", "Botón de " + pTranslation + " podrido");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_pressure_plate", "Placa de presión de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_slab", "Baldosa de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_stairs", "Escaleras de " + pTranslation + " podridas");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fence", "Valla de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_fencegate", "Puerta de valla de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_door", "Puerta de " + pTranslation + " podrida");
+        this.add("block." + RottenPlanksAndLogs.MOD_ID + ".rotten_" + pWoodType + "_trapdoor", "Trampilla de " + pTranslation + " podrida");
     }
 }

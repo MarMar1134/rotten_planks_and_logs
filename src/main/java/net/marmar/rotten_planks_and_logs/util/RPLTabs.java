@@ -94,17 +94,17 @@ public class RPLTabs {
                         output.accept(RPLBlocks.ROTTEN_JUNGLE_BUTTON.get());
 
                         //Mangle
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_LOG.get());
-                        output.accept(RPLBlocks.STRIPPED_ROTTEN_MANGLE_LOG.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_WOOD.get());
-                        output.accept(RPLBlocks.STRIPPED_ROTTEN_MANGLE_WOOD.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_PLANKS.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_STAIRS.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_SLAB.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_FENCE.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_FENCEGATE.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_PRESSURE_PLATE.get());
-                        output.accept(RPLBlocks.ROTTEN_MANGLE_BUTTON.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_LOG.get());
+                        output.accept(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_LOG.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_WOOD.get());
+                        output.accept(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_WOOD.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_PLANKS.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_STAIRS.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_SLAB.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_FENCE.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_FENCEGATE.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_PRESSURE_PLATE.get());
+                        output.accept(RPLBlocks.ROTTEN_MANGROVE_BUTTON.get());
 
                         //Spruce
                         output.accept(RPLBlocks.ROTTEN_SPRUCE_LOG.get());

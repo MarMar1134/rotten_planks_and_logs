@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "rotten_dark_oak_planks",
+  "ingredients": [
+    {
+      "item": "rotten_planks_and_logs:rotten_dark_oak_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "rotten_planks_and_logs:rotten_dark_oak_planks"
+  }
+}

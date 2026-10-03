@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "rotten_planks_and_logs:block/rotten_dark_oak_door_bottom",
+    "top": "rotten_planks_and_logs:block/rotten_dark_oak_door_top"
+  }
+}

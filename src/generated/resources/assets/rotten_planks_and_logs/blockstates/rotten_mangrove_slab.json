@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "rotten_planks_and_logs:block/rotten_mangrove_slab"
+    },
+    "type=double": {
+      "model": "rotten_planks_and_logs:block/rotten_mangrove_planks"
+    },
+    "type=top": {
+      "model": "rotten_planks_and_logs:block/rotten_mangrove_slab_top"
+    }
+  }
+}

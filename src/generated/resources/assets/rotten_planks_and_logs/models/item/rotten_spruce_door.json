@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "rotten_planks_and_logs:item/rotten_spruce_door"
+  }
+}
