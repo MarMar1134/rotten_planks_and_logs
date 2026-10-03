@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:stripped_rotten_mangrove_wood_from_vine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_and_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stripped_mangrove_wood"
+          },
+          {
+            "items": "minecraft:vine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wood_and_vine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:stripped_rotten_mangrove_wood_from_vine"
+    ]
+  }
+}

@@ -7,7 +7,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ToolAction;
+import net.neoforged.neoforge.common.ItemAbility;
 import org.jetbrains.annotations.Nullable;
 
 public class RottenLogsBlock extends RotatedPillarBlock {
@@ -31,8 +31,7 @@ public class RottenLogsBlock extends RotatedPillarBlock {
     }
 
     @Override
-    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-        //Logs
+    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ItemAbility itemAbility, boolean simulate) {
         if (state.is(RPLBlocks.ROTTEN_ACACIA_LOG.get())) {
             return RPLBlocks.STRIPPED_ROTTEN_ACACIA_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
         }
@@ -57,7 +56,7 @@ public class RottenLogsBlock extends RotatedPillarBlock {
 
         //Woods
         if (state.is(RPLBlocks.ROTTEN_ACACIA_WOOD.get())) {
-                return RPLBlocks.STRIPPED_ROTTEN_ACACIA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            return RPLBlocks.STRIPPED_ROTTEN_ACACIA_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
         }
         if (state.is(RPLBlocks.ROTTEN_OAK_WOOD.get())) {
             return RPLBlocks.STRIPPED_ROTTEN_OAK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
@@ -78,6 +77,6 @@ public class RottenLogsBlock extends RotatedPillarBlock {
             return RPLBlocks.STRIPPED_ROTTEN_JUNGLE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
         }
 
-        return super.getToolModifiedState(state, context, toolAction, simulate);
+        return super.getToolModifiedState(state, context, itemAbility, simulate);
     }
 }

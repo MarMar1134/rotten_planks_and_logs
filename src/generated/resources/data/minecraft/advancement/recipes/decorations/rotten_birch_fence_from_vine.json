@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rotten_birch_fence_from_vine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_and_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:birch_fence"
+          },
+          {
+            "items": "minecraft:vine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wood_and_vine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rotten_birch_fence_from_vine"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_all",
   "textures": {
+    "all": "rotten_planks_and_logs:block/rotten_mangrove_wood",
     "end": "rotten_planks_and_logs:block/rotten_mangrove_log",
     "side": "rotten_planks_and_logs:block/rotten_mangrove_log"
   }

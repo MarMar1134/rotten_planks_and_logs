@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rotten_oak_door_from_moss_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_and_moss_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:oak_door"
+          },
+          {
+            "items": "minecraft:moss_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wood_and_moss_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rotten_oak_door_from_moss_block"
+    ]
+  }
+}

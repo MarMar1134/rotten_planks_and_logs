@@ -2,7 +2,7 @@ package net.marmar.rotten_planks_and_logs.data.lang;
 
 import net.marmar.rotten_planks_and_logs.RottenPlanksAndLogs;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class EnglishLangProvider extends LanguageProvider {
     public EnglishLangProvider(PackOutput output) {
@@ -19,7 +19,7 @@ public class EnglishLangProvider extends LanguageProvider {
         addWoodTranslations("cherry", "cherry");
         addWoodTranslations("dark_oak", "dark oak");
         addWoodTranslations("jungle", "jungle");
-        addWoodTranslations("mangle", "mangrove");
+        addWoodTranslations("mangrove", "mangrove");
         addWoodTranslations("spruce", "spruce");
         addWoodTranslations("oak", "oak");
     }

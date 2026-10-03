@@ -2,14 +2,14 @@ package net.marmar.rotten_planks_and_logs.data.model;
 
 import net.marmar.rotten_planks_and_logs.RottenPlanksAndLogs;
 import net.marmar.rotten_planks_and_logs.block.RPLBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class RPLItemModelProvider extends ItemModelProvider {
     public RPLItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -26,7 +26,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_ACACIA_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_ACACIA_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_ACACIA_FENCE, RPLBlocks.ROTTEN_ACACIA_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_ACACIA_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_ACACIA_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_ACACIA_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_ACACIA_TRAPDOOR);
@@ -39,7 +39,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_BAMBOO_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_BAMBOO_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_BAMBOO_FENCE, RPLBlocks.ROTTEN_BAMBOO_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_BAMBOO_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_BAMBOO_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_BAMBOO_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_BAMBOO_TRAPDOOR);
@@ -52,7 +52,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_BIRCH_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_BIRCH_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_BIRCH_FENCE, RPLBlocks.ROTTEN_BIRCH_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_BIRCH_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_BIRCH_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_BIRCH_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_BIRCH_TRAPDOOR);
@@ -65,7 +65,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_CHERRY_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_CHERRY_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_CHERRY_FENCE, RPLBlocks.ROTTEN_CHERRY_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_CHERRY_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_CHERRY_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_CHERRY_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_CHERRY_TRAPDOOR);
@@ -78,7 +78,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_DARK_OAK_FENCE, RPLBlocks.ROTTEN_DARK_OAK_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_DARK_OAK_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_DARK_OAK_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_DARK_OAK_TRAPDOOR);
@@ -91,7 +91,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_JUNGLE_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_JUNGLE_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_JUNGLE_FENCE, RPLBlocks.ROTTEN_JUNGLE_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_JUNGLE_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_JUNGLE_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_JUNGLE_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_JUNGLE_TRAPDOOR);
@@ -104,7 +104,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_MANGROVE_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_MANGROVE_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_MANGROVE_FENCE, RPLBlocks.ROTTEN_MANGROVE_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_MANGROVE_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_MANGROVE_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_MANGROVE_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_MANGROVE_TRAPDOOR);
@@ -117,7 +117,7 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_SPRUCE_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_SPRUCE_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_SPRUCE_FENCE, RPLBlocks.ROTTEN_SPRUCE_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_SPRUCE_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_SPRUCE_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_SPRUCE_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_SPRUCE_TRAPDOOR);
@@ -130,35 +130,35 @@ public class RPLItemModelProvider extends ItemModelProvider {
         blockWithItem(RPLBlocks.ROTTEN_OAK_SLAB);
         blockWithItem(RPLBlocks.ROTTEN_OAK_STAIRS);
         fenceItem(RPLBlocks.ROTTEN_OAK_FENCE, RPLBlocks.ROTTEN_OAK_PLANKS);
-        blockWithItem(RPLBlocks.ROTTEN_OAK_FENCEGATE);
+        blockWithItem(RPLBlocks.ROTTEN_OAK_FENCE_GATE);
 
         simpleBlockItem(RPLBlocks.ROTTEN_OAK_DOOR);
         trapdoorItem(RPLBlocks.ROTTEN_OAK_TRAPDOOR);
     }
 
-    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture", ResourceLocation.fromNamespaceAndPath(RottenPlanksAndLogs.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(RottenPlanksAndLogs.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture", ResourceLocation.fromNamespaceAndPath(RottenPlanksAndLogs.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(RottenPlanksAndLogs.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    public void blockWithItem(RegistryObject<Block> block) {
-        this.withExistingParent(RottenPlanksAndLogs.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    public void blockWithItem(DeferredBlock<Block> block) {
+        this.withExistingParent(RottenPlanksAndLogs.MOD_ID + ":" + BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+                modLoc("block/" + BuiltInRegistries.BLOCK.getKey(block.get()).getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+    private ItemModelBuilder simpleBlockItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 mcLoc("item/generated")).texture("layer0",
                 modLoc("item/" + item.getId().getPath()));
     }
 
-    public void trapdoorItem(RegistryObject<Block> block) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
-                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+    public void trapdoorItem(DeferredBlock<Block> block) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(),
+                modLoc("block/" + BuiltInRegistries.BLOCK.getKey(block.get()).getPath() + "_bottom"));
     }
 }

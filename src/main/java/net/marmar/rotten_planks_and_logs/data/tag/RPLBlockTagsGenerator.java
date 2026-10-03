@@ -5,9 +5,9 @@ import net.marmar.rotten_planks_and_logs.block.RPLBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,15 +32,15 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.FENCE_GATES).add(
-                RPLBlocks.ROTTEN_ACACIA_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_BIRCH_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_BAMBOO_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_CHERRY_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_DARK_OAK_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_JUNGLE_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_MANGROVE_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_SPRUCE_FENCEGATE.get(),
-                RPLBlocks.ROTTEN_OAK_FENCEGATE.get()
+                RPLBlocks.ROTTEN_ACACIA_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_BIRCH_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_BAMBOO_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_CHERRY_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_DARK_OAK_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_JUNGLE_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_MANGROVE_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_SPRUCE_FENCE_GATE.get(),
+                RPLBlocks.ROTTEN_OAK_FENCE_GATE.get()
         );
 
         this.tag(BlockTags.WOODEN_STAIRS).add(
@@ -103,7 +103,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_ACACIA_SLAB.get(),
                 RPLBlocks.ROTTEN_ACACIA_STAIRS.get(),
                 RPLBlocks.ROTTEN_ACACIA_FENCE.get(),
-                RPLBlocks.ROTTEN_ACACIA_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_ACACIA_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_ACACIA_DOOR.get(),
                 RPLBlocks.ROTTEN_ACACIA_TRAPDOOR.get(),
 
@@ -114,7 +114,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_BAMBOO_SLAB.get(),
                 RPLBlocks.ROTTEN_BAMBOO_STAIRS.get(),
                 RPLBlocks.ROTTEN_BAMBOO_FENCE.get(),
-                RPLBlocks.ROTTEN_BAMBOO_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_BAMBOO_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_BAMBOO_DOOR.get(),
                 RPLBlocks.ROTTEN_BAMBOO_TRAPDOOR.get(),
 
@@ -129,7 +129,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_BIRCH_SLAB.get(),
                 RPLBlocks.ROTTEN_BIRCH_STAIRS.get(),
                 RPLBlocks.ROTTEN_BIRCH_FENCE.get(),
-                RPLBlocks.ROTTEN_BIRCH_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_BIRCH_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_BIRCH_DOOR.get(),
                 RPLBlocks.ROTTEN_BIRCH_TRAPDOOR.get(),
 
@@ -144,7 +144,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_CHERRY_SLAB.get(),
                 RPLBlocks.ROTTEN_CHERRY_STAIRS.get(),
                 RPLBlocks.ROTTEN_CHERRY_FENCE.get(),
-                RPLBlocks.ROTTEN_CHERRY_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_CHERRY_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_CHERRY_DOOR.get(),
                 RPLBlocks.ROTTEN_CHERRY_TRAPDOOR.get(),
 
@@ -159,7 +159,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_DARK_OAK_SLAB.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_STAIRS.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_FENCE.get(),
-                RPLBlocks.ROTTEN_DARK_OAK_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_DARK_OAK_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_DOOR.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_TRAPDOOR.get(),
 
@@ -174,7 +174,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_JUNGLE_SLAB.get(),
                 RPLBlocks.ROTTEN_JUNGLE_STAIRS.get(),
                 RPLBlocks.ROTTEN_JUNGLE_FENCE.get(),
-                RPLBlocks.ROTTEN_JUNGLE_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_JUNGLE_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_JUNGLE_DOOR.get(),
                 RPLBlocks.ROTTEN_JUNGLE_TRAPDOOR.get(),
 
@@ -189,7 +189,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_MANGROVE_SLAB.get(),
                 RPLBlocks.ROTTEN_MANGROVE_STAIRS.get(),
                 RPLBlocks.ROTTEN_MANGROVE_FENCE.get(),
-                RPLBlocks.ROTTEN_MANGROVE_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_MANGROVE_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_MANGROVE_DOOR.get(),
                 RPLBlocks.ROTTEN_MANGROVE_TRAPDOOR.get(),
 
@@ -204,7 +204,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_SPRUCE_SLAB.get(),
                 RPLBlocks.ROTTEN_SPRUCE_STAIRS.get(),
                 RPLBlocks.ROTTEN_SPRUCE_FENCE.get(),
-                RPLBlocks.ROTTEN_SPRUCE_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_SPRUCE_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_SPRUCE_DOOR.get(),
                 RPLBlocks.ROTTEN_SPRUCE_TRAPDOOR.get(),
 
@@ -219,7 +219,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_OAK_SLAB.get(),
                 RPLBlocks.ROTTEN_OAK_STAIRS.get(),
                 RPLBlocks.ROTTEN_OAK_FENCE.get(),
-                RPLBlocks.ROTTEN_OAK_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_OAK_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_OAK_DOOR.get(),
                 RPLBlocks.ROTTEN_OAK_TRAPDOOR.get()
         );
@@ -236,7 +236,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_ACACIA_SLAB.get(),
                 RPLBlocks.ROTTEN_ACACIA_STAIRS.get(),
                 RPLBlocks.ROTTEN_ACACIA_FENCE.get(),
-                RPLBlocks.ROTTEN_ACACIA_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_ACACIA_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_ACACIA_DOOR.get(),
                 RPLBlocks.ROTTEN_ACACIA_TRAPDOOR.get(),
 
@@ -247,7 +247,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_BAMBOO_SLAB.get(),
                 RPLBlocks.ROTTEN_BAMBOO_STAIRS.get(),
                 RPLBlocks.ROTTEN_BAMBOO_FENCE.get(),
-                RPLBlocks.ROTTEN_BAMBOO_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_BAMBOO_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_BAMBOO_DOOR.get(),
                 RPLBlocks.ROTTEN_BAMBOO_TRAPDOOR.get(),
 
@@ -262,7 +262,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_BIRCH_SLAB.get(),
                 RPLBlocks.ROTTEN_BIRCH_STAIRS.get(),
                 RPLBlocks.ROTTEN_BIRCH_FENCE.get(),
-                RPLBlocks.ROTTEN_BIRCH_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_BIRCH_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_BIRCH_DOOR.get(),
                 RPLBlocks.ROTTEN_BIRCH_TRAPDOOR.get(),
 
@@ -277,7 +277,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_CHERRY_SLAB.get(),
                 RPLBlocks.ROTTEN_CHERRY_STAIRS.get(),
                 RPLBlocks.ROTTEN_CHERRY_FENCE.get(),
-                RPLBlocks.ROTTEN_CHERRY_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_CHERRY_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_CHERRY_DOOR.get(),
                 RPLBlocks.ROTTEN_CHERRY_TRAPDOOR.get(),
 
@@ -292,7 +292,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_DARK_OAK_SLAB.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_STAIRS.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_FENCE.get(),
-                RPLBlocks.ROTTEN_DARK_OAK_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_DARK_OAK_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_DOOR.get(),
                 RPLBlocks.ROTTEN_DARK_OAK_TRAPDOOR.get(),
 
@@ -307,7 +307,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_JUNGLE_SLAB.get(),
                 RPLBlocks.ROTTEN_JUNGLE_STAIRS.get(),
                 RPLBlocks.ROTTEN_JUNGLE_FENCE.get(),
-                RPLBlocks.ROTTEN_JUNGLE_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_JUNGLE_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_JUNGLE_DOOR.get(),
                 RPLBlocks.ROTTEN_JUNGLE_TRAPDOOR.get(),
 
@@ -322,7 +322,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_MANGROVE_SLAB.get(),
                 RPLBlocks.ROTTEN_MANGROVE_STAIRS.get(),
                 RPLBlocks.ROTTEN_MANGROVE_FENCE.get(),
-                RPLBlocks.ROTTEN_MANGROVE_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_MANGROVE_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_MANGROVE_DOOR.get(),
                 RPLBlocks.ROTTEN_MANGROVE_TRAPDOOR.get(),
 
@@ -337,7 +337,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_SPRUCE_SLAB.get(),
                 RPLBlocks.ROTTEN_SPRUCE_STAIRS.get(),
                 RPLBlocks.ROTTEN_SPRUCE_FENCE.get(),
-                RPLBlocks.ROTTEN_SPRUCE_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_SPRUCE_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_SPRUCE_DOOR.get(),
                 RPLBlocks.ROTTEN_SPRUCE_TRAPDOOR.get(),
 
@@ -352,7 +352,7 @@ public class RPLBlockTagsGenerator extends BlockTagsProvider {
                 RPLBlocks.ROTTEN_OAK_SLAB.get(),
                 RPLBlocks.ROTTEN_OAK_STAIRS.get(),
                 RPLBlocks.ROTTEN_OAK_FENCE.get(),
-                RPLBlocks.ROTTEN_OAK_FENCEGATE.get(),
+                RPLBlocks.ROTTEN_OAK_FENCE_GATE.get(),
                 RPLBlocks.ROTTEN_OAK_DOOR.get(),
                 RPLBlocks.ROTTEN_OAK_TRAPDOOR.get()
         );

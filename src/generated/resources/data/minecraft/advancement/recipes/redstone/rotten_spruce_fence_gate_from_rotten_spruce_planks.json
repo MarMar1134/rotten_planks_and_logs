@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rotten_spruce_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "rotten_planks_and_logs:rotten_spruce_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:rotten_spruce_fence_gate_from_rotten_spruce_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rotten_spruce_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:rotten_spruce_fence_gate_from_rotten_spruce_planks"
+    ]
+  }
+}

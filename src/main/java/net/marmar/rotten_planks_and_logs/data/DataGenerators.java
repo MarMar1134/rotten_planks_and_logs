@@ -9,27 +9,28 @@ import net.marmar.rotten_planks_and_logs.data.tag.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = RottenPlanksAndLogs.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@SuppressWarnings("removal")
+@EventBusSubscriber(modid = RottenPlanksAndLogs.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event){
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-        CompletableFuture<HolderLookup.Provider> LookupProvider = event.getLookupProvider();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         //Recipes
-        generator.addProvider(event.includeServer(), new RPLRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), new RPLRecipeProvider(packOutput, lookupProvider));
 
         //Loot tables
-        generator.addProvider(event.includeServer(), RPLLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), RPLLootTableProvider.create(packOutput, lookupProvider));
 
         //Models
         generator.addProvider(event.includeClient(), new RPLBlockstateProvider(packOutput, existingFileHelper));
@@ -37,8 +38,8 @@ public class DataGenerators {
 
         //Tags
         RPLBlockTagsGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
-                new RPLBlockTagsGenerator(packOutput, LookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new RPLItemTagsGenerator(packOutput, LookupProvider, blockTagGenerator.contentsGetter(),
+                new RPLBlockTagsGenerator(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new RPLItemTagsGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(),
                 existingFileHelper));
 
         //Lang
