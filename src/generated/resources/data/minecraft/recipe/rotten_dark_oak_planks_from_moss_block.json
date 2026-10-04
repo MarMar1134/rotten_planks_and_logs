@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:dark_oak_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:dark_oak_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

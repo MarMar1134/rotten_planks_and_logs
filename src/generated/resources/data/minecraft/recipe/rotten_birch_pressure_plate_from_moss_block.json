@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:birch_pressure_plate"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:birch_pressure_plate",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

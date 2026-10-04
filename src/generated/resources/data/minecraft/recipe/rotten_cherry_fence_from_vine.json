@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:cherry_fence"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:cherry_fence",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "rotten_planks_and_logs:rotten_oak_planks"
-    }
+    "rotten_planks_and_logs:rotten_oak_planks"
   ],
   "result": {
     "count": 1,

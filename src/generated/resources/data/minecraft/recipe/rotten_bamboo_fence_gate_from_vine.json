@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bamboo_fence_gate"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:bamboo_fence_gate",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_slab"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:mangrove_slab",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

@@ -1,5 +1,6 @@
 package net.marmar.rotten_planks_and_logs.data;
 
+import net.marmar.rotten_planks_and_logs.RottenPlanksAndLogs;
 import net.marmar.rotten_planks_and_logs.block.RPLBlocks;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -14,15 +15,30 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-
 import java.util.concurrent.CompletableFuture;
 
 public class RPLRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public RPLRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries);
+    public RPLRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
+        super(provider, output);
     }
 
-    private static void buildIndividualBlockRecipes(RecipeOutput consumer){
+    public static class Runner extends RecipeProvider.Runner {
+        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+            super(packOutput, provider);
+        }
+
+        @Override
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
+            return new RPLRecipeProvider(provider, recipeOutput);
+        }
+
+        @Override
+        public String getName() {
+            return "Rotten Planks and Logs Recipes";
+        }
+    }
+
+    private void buildIndividualBlockRecipes(RecipeOutput consumer){
         //Acacia
         rottenWoodRecipe(Blocks.ACACIA_LOG, RPLBlocks.ROTTEN_ACACIA_LOG.get(), consumer);
         rottenWoodRecipe(Blocks.STRIPPED_ACACIA_LOG, RPLBlocks.STRIPPED_ROTTEN_ACACIA_LOG.get(), consumer);
@@ -156,93 +172,93 @@ public class RPLRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput consumer) {
-        buildIndividualBlockRecipes(consumer);
+    protected void buildRecipes() {
+        buildIndividualBlockRecipes(output);
 
         //Acacia
-        logToPlankRecipe(RPLBlocks.ROTTEN_ACACIA_LOG, RPLBlocks.ROTTEN_ACACIA_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_ACACIA_LOG, RPLBlocks.ROTTEN_ACACIA_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_ACACIA_WOOD, RPLBlocks.ROTTEN_ACACIA_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_ACACIA_WOOD, RPLBlocks.ROTTEN_ACACIA_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_ACACIA_LOG, RPLBlocks.ROTTEN_ACACIA_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_ACACIA_LOG, RPLBlocks.ROTTEN_ACACIA_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_ACACIA_WOOD, RPLBlocks.ROTTEN_ACACIA_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_ACACIA_WOOD, RPLBlocks.ROTTEN_ACACIA_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_ACACIA_PLANKS, RPLBlocks.ROTTEN_ACACIA_STAIRS, RPLBlocks.ROTTEN_ACACIA_SLAB, RPLBlocks.ROTTEN_ACACIA_FENCE,
                 RPLBlocks.ROTTEN_ACACIA_FENCE_GATE, RPLBlocks.ROTTEN_ACACIA_BUTTON, RPLBlocks.ROTTEN_ACACIA_PRESSURE_PLATE, RPLBlocks.ROTTEN_ACACIA_DOOR, RPLBlocks.ROTTEN_ACACIA_TRAPDOOR,
-                consumer);
+                output);
 
         //Bamboo
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_BAMBOO_PLANKS, RPLBlocks.ROTTEN_BAMBOO_STAIRS, RPLBlocks.ROTTEN_BAMBOO_SLAB, RPLBlocks.ROTTEN_BAMBOO_FENCE,
                 RPLBlocks.ROTTEN_BAMBOO_FENCE_GATE, RPLBlocks.ROTTEN_BAMBOO_BUTTON, RPLBlocks.ROTTEN_BAMBOO_PRESSURE_PLATE, RPLBlocks.ROTTEN_BAMBOO_DOOR, RPLBlocks.ROTTEN_BAMBOO_TRAPDOOR,
-                consumer);
+                output);
 
         //Birch
-        logToPlankRecipe(RPLBlocks.ROTTEN_BIRCH_LOG, RPLBlocks.ROTTEN_BIRCH_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_BIRCH_LOG, RPLBlocks.ROTTEN_BIRCH_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_BIRCH_WOOD, RPLBlocks.ROTTEN_BIRCH_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_BIRCH_WOOD, RPLBlocks.ROTTEN_BIRCH_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_BIRCH_LOG, RPLBlocks.ROTTEN_BIRCH_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_BIRCH_LOG, RPLBlocks.ROTTEN_BIRCH_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_BIRCH_WOOD, RPLBlocks.ROTTEN_BIRCH_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_BIRCH_WOOD, RPLBlocks.ROTTEN_BIRCH_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_BIRCH_PLANKS, RPLBlocks.ROTTEN_BIRCH_STAIRS, RPLBlocks.ROTTEN_BIRCH_SLAB, RPLBlocks.ROTTEN_BIRCH_FENCE,
                 RPLBlocks.ROTTEN_BIRCH_FENCE_GATE, RPLBlocks.ROTTEN_BIRCH_BUTTON, RPLBlocks.ROTTEN_BIRCH_PRESSURE_PLATE, RPLBlocks.ROTTEN_BIRCH_DOOR, RPLBlocks.ROTTEN_BIRCH_TRAPDOOR,
-                consumer);
+                output);
 
         //Cherry
-        logToPlankRecipe(RPLBlocks.ROTTEN_CHERRY_LOG, RPLBlocks.ROTTEN_CHERRY_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_CHERRY_LOG, RPLBlocks.ROTTEN_CHERRY_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_CHERRY_WOOD, RPLBlocks.ROTTEN_CHERRY_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_CHERRY_WOOD, RPLBlocks.ROTTEN_CHERRY_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_CHERRY_LOG, RPLBlocks.ROTTEN_CHERRY_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_CHERRY_LOG, RPLBlocks.ROTTEN_CHERRY_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_CHERRY_WOOD, RPLBlocks.ROTTEN_CHERRY_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_CHERRY_WOOD, RPLBlocks.ROTTEN_CHERRY_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_CHERRY_PLANKS, RPLBlocks.ROTTEN_CHERRY_STAIRS, RPLBlocks.ROTTEN_CHERRY_SLAB, RPLBlocks.ROTTEN_CHERRY_FENCE,
                 RPLBlocks.ROTTEN_CHERRY_FENCE_GATE, RPLBlocks.ROTTEN_CHERRY_BUTTON, RPLBlocks.ROTTEN_CHERRY_PRESSURE_PLATE, RPLBlocks.ROTTEN_CHERRY_DOOR, RPLBlocks.ROTTEN_CHERRY_TRAPDOOR,
-                consumer);
+                output);
 
         //Dark oak
-        logToPlankRecipe(RPLBlocks.ROTTEN_DARK_OAK_LOG, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_DARK_OAK_LOG, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_DARK_OAK_WOOD, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_DARK_OAK_WOOD, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_DARK_OAK_LOG, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_DARK_OAK_LOG, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_DARK_OAK_WOOD, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_DARK_OAK_WOOD, RPLBlocks.ROTTEN_DARK_OAK_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_DARK_OAK_PLANKS, RPLBlocks.ROTTEN_DARK_OAK_STAIRS, RPLBlocks.ROTTEN_DARK_OAK_SLAB, RPLBlocks.ROTTEN_DARK_OAK_FENCE,
                 RPLBlocks.ROTTEN_DARK_OAK_FENCE_GATE, RPLBlocks.ROTTEN_DARK_OAK_BUTTON, RPLBlocks.ROTTEN_DARK_OAK_PRESSURE_PLATE, RPLBlocks.ROTTEN_DARK_OAK_DOOR, RPLBlocks.ROTTEN_DARK_OAK_TRAPDOOR,
-                consumer);
+                output);
 
         //Jungle
-        logToPlankRecipe(RPLBlocks.ROTTEN_JUNGLE_LOG, RPLBlocks.ROTTEN_JUNGLE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_JUNGLE_LOG, RPLBlocks.ROTTEN_JUNGLE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_JUNGLE_WOOD, RPLBlocks.ROTTEN_JUNGLE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_JUNGLE_WOOD, RPLBlocks.ROTTEN_JUNGLE_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_JUNGLE_LOG, RPLBlocks.ROTTEN_JUNGLE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_JUNGLE_LOG, RPLBlocks.ROTTEN_JUNGLE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_JUNGLE_WOOD, RPLBlocks.ROTTEN_JUNGLE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_JUNGLE_WOOD, RPLBlocks.ROTTEN_JUNGLE_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_JUNGLE_PLANKS, RPLBlocks.ROTTEN_JUNGLE_STAIRS, RPLBlocks.ROTTEN_JUNGLE_SLAB, RPLBlocks.ROTTEN_JUNGLE_FENCE,
                 RPLBlocks.ROTTEN_JUNGLE_FENCE_GATE, RPLBlocks.ROTTEN_JUNGLE_BUTTON, RPLBlocks.ROTTEN_JUNGLE_PRESSURE_PLATE, RPLBlocks.ROTTEN_JUNGLE_DOOR, RPLBlocks.ROTTEN_JUNGLE_TRAPDOOR,
-                consumer);
+                output);
 
         //Mangrove
-        logToPlankRecipe(RPLBlocks.ROTTEN_MANGROVE_LOG, RPLBlocks.ROTTEN_MANGROVE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_LOG, RPLBlocks.ROTTEN_MANGROVE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_MANGROVE_WOOD, RPLBlocks.ROTTEN_MANGROVE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_WOOD, RPLBlocks.ROTTEN_MANGROVE_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_MANGROVE_LOG, RPLBlocks.ROTTEN_MANGROVE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_LOG, RPLBlocks.ROTTEN_MANGROVE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_MANGROVE_WOOD, RPLBlocks.ROTTEN_MANGROVE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_MANGROVE_WOOD, RPLBlocks.ROTTEN_MANGROVE_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_MANGROVE_PLANKS, RPLBlocks.ROTTEN_MANGROVE_STAIRS, RPLBlocks.ROTTEN_MANGROVE_SLAB, RPLBlocks.ROTTEN_MANGROVE_FENCE,
                 RPLBlocks.ROTTEN_MANGROVE_FENCE_GATE, RPLBlocks.ROTTEN_MANGROVE_BUTTON, RPLBlocks.ROTTEN_MANGROVE_PRESSURE_PLATE, RPLBlocks.ROTTEN_MANGROVE_DOOR, RPLBlocks.ROTTEN_MANGROVE_TRAPDOOR,
-                consumer);
+                output);
 
         //Spruce
-        logToPlankRecipe(RPLBlocks.ROTTEN_SPRUCE_LOG, RPLBlocks.ROTTEN_SPRUCE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_SPRUCE_LOG, RPLBlocks.ROTTEN_SPRUCE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_SPRUCE_WOOD, RPLBlocks.ROTTEN_SPRUCE_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_SPRUCE_WOOD, RPLBlocks.ROTTEN_SPRUCE_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_SPRUCE_LOG, RPLBlocks.ROTTEN_SPRUCE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_SPRUCE_LOG, RPLBlocks.ROTTEN_SPRUCE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_SPRUCE_WOOD, RPLBlocks.ROTTEN_SPRUCE_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_SPRUCE_WOOD, RPLBlocks.ROTTEN_SPRUCE_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_SPRUCE_PLANKS, RPLBlocks.ROTTEN_SPRUCE_STAIRS, RPLBlocks.ROTTEN_SPRUCE_SLAB, RPLBlocks.ROTTEN_SPRUCE_FENCE,
                 RPLBlocks.ROTTEN_SPRUCE_FENCE_GATE, RPLBlocks.ROTTEN_SPRUCE_BUTTON, RPLBlocks.ROTTEN_SPRUCE_PRESSURE_PLATE, RPLBlocks.ROTTEN_SPRUCE_DOOR, RPLBlocks.ROTTEN_SPRUCE_TRAPDOOR,
-                consumer);
+                output);
 
         //Oak
-        logToPlankRecipe(RPLBlocks.ROTTEN_OAK_LOG, RPLBlocks.ROTTEN_OAK_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_OAK_LOG, RPLBlocks.ROTTEN_OAK_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.ROTTEN_OAK_WOOD, RPLBlocks.ROTTEN_OAK_PLANKS, consumer);
-        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_OAK_WOOD, RPLBlocks.ROTTEN_OAK_PLANKS, consumer);
+        logToPlankRecipe(RPLBlocks.ROTTEN_OAK_LOG, RPLBlocks.ROTTEN_OAK_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_OAK_LOG, RPLBlocks.ROTTEN_OAK_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.ROTTEN_OAK_WOOD, RPLBlocks.ROTTEN_OAK_PLANKS, output);
+        logToPlankRecipe(RPLBlocks.STRIPPED_ROTTEN_OAK_WOOD, RPLBlocks.ROTTEN_OAK_PLANKS, output);
 
         rottenWoodFamilyRecipes(RPLBlocks.ROTTEN_OAK_PLANKS, RPLBlocks.ROTTEN_OAK_STAIRS, RPLBlocks.ROTTEN_OAK_SLAB, RPLBlocks.ROTTEN_OAK_FENCE,
                 RPLBlocks.ROTTEN_OAK_FENCE_GATE, RPLBlocks.ROTTEN_OAK_BUTTON, RPLBlocks.ROTTEN_OAK_PRESSURE_PLATE, RPLBlocks.ROTTEN_OAK_DOOR, RPLBlocks.ROTTEN_OAK_TRAPDOOR,
-                consumer);
+                output);
     }
 
     //Triggers
@@ -254,27 +270,27 @@ public class RPLRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     //Helper methods
-    private static void rottenWoodRecipe(Block pBlock, Block pRottenBlock, RecipeOutput pConsumer){
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, pRottenBlock)
+    private void rottenWoodRecipe(Block pBlock, Block pRottenBlock, RecipeOutput pConsumer){
+        shapeless(RecipeCategory.DECORATIONS, pRottenBlock)
                 .requires(pBlock).requires(Items.VINE)
                 .unlockedBy("has_wood_and_vine", HAS_WOOD_OR_VINE(pBlock))
                 .save(pConsumer, getItemName(pRottenBlock) + "_from_vine");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, pRottenBlock)
+        shapeless(RecipeCategory.DECORATIONS, pRottenBlock)
                 .requires(pBlock).requires(Items.MOSS_BLOCK)
                 .unlockedBy("has_wood_and_moss_block", HAS_WOOD_OR_MOSS_BLOCK(pBlock))
                 .save(pConsumer, getItemName(pRottenBlock) + "_from_moss_block");
     }
 
-    private static void logToPlankRecipe(DeferredBlock<Block> pLog, DeferredBlock<Block> pPlank, RecipeOutput pConsumer){
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, pPlank.get(), 4)
+    private void logToPlankRecipe(DeferredBlock<Block> pLog, DeferredBlock<Block> pPlank, RecipeOutput pConsumer){
+        shapeless(RecipeCategory.BUILDING_BLOCKS, pPlank.get(), 4)
                 .requires(pLog.get())
                 .group(getItemName(pPlank.get()))
                 .unlockedBy(getHasName(pLog.get()), has(pLog.get()))
                 .save(pConsumer, getItemName(pPlank.get()) + "_from_" + getItemName(pLog.get()));
     }
 
-    private static void rottenWoodFamilyRecipes(DeferredBlock<Block> pPlank, DeferredBlock<Block> pStairs, DeferredBlock<Block> pSlab,
+    private void rottenWoodFamilyRecipes(DeferredBlock<Block> pPlank, DeferredBlock<Block> pStairs, DeferredBlock<Block> pSlab,
                                                 DeferredBlock<Block> pFence, DeferredBlock<Block> pFenceGate, DeferredBlock<Block> pButton,
                                                 DeferredBlock<Block> pPressurePlace, DeferredBlock<Block> pDoor, DeferredBlock<Block> pTrapdoor,
                                                 RecipeOutput pConsumer){

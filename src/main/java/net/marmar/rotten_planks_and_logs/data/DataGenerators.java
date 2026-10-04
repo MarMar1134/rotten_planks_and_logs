@@ -27,7 +27,7 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         //Recipes
-        generator.addProvider(event.includeServer(), new RPLRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new RPLRecipeProvider.Runner(packOutput, lookupProvider));
 
         //Loot tables
         generator.addProvider(event.includeServer(), RPLLootTableProvider.create(packOutput, lookupProvider));

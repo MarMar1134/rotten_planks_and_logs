@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:stripped_cherry_log"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:stripped_cherry_log",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

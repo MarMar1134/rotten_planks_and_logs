@@ -3,9 +3,7 @@
   "category": "building",
   "group": "rotten_jungle_planks",
   "ingredients": [
-    {
-      "item": "rotten_planks_and_logs:rotten_jungle_wood"
-    }
+    "rotten_planks_and_logs:rotten_jungle_wood"
   ],
   "result": {
     "count": 4,

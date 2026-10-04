@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:jungle_trapdoor"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:jungle_trapdoor",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

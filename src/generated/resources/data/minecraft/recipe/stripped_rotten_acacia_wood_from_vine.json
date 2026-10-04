@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:stripped_acacia_wood"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:stripped_acacia_wood",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

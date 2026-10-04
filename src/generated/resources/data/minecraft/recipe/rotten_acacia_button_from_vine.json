@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:acacia_button"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:acacia_button",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

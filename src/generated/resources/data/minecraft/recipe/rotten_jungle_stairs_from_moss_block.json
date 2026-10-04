@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:jungle_stairs"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:jungle_stairs",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

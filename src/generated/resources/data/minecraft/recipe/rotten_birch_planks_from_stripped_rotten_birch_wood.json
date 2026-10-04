@@ -3,9 +3,7 @@
   "category": "building",
   "group": "rotten_birch_planks",
   "ingredients": [
-    {
-      "item": "rotten_planks_and_logs:stripped_rotten_birch_wood"
-    }
+    "rotten_planks_and_logs:stripped_rotten_birch_wood"
   ],
   "result": {
     "count": 4,

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:acacia_trapdoor"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:acacia_trapdoor",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

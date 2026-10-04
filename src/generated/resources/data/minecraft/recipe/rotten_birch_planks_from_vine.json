@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:birch_planks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:birch_planks",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

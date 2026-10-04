@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "rotten_planks_and_logs:rotten_spruce_planks"
-    }
+    "#": "rotten_planks_and_logs:rotten_spruce_planks"
   },
   "pattern": [
     "#  ",

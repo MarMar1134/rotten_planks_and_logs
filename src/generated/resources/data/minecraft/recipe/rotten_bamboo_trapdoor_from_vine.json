@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bamboo_trapdoor"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:bamboo_trapdoor",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

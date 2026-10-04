@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:oak_stairs"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:oak_stairs",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

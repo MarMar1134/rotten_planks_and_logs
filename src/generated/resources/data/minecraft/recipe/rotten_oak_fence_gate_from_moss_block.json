@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:oak_fence_gate"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:oak_fence_gate",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

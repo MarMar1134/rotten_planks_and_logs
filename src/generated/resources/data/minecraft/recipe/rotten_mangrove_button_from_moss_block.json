@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_button"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:mangrove_button",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

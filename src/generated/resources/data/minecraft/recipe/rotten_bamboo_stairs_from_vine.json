@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bamboo_stairs"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:bamboo_stairs",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

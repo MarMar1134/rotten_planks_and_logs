@@ -5,7 +5,6 @@ import net.marmar.rotten_planks_and_logs.block.custom.RottenLogsBlock;
 import net.marmar.rotten_planks_and_logs.block.custom.RottenPlanksBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -14,269 +13,269 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 
-import java.util.function.Supplier;
+import java.util.function.Function;
 
 public class RPLBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(RottenPlanksAndLogs.MOD_ID);
     public static final DeferredRegister.Items BLOCK_ITEMS = DeferredRegister.createItems(RottenPlanksAndLogs.MOD_ID);
 
     //Acacia
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_LOG = registerBlockWithItem("rotten_acacia_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_ACACIA_LOG = registerBlockWithItem("stripped_rotten_acacia_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_ACACIA_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_WOOD = registerBlockWithItem("rotten_acacia_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_ACACIA_WOOD = registerBlockWithItem("stripped_rotten_acacia_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_ACACIA_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_PLANKS = registerBlockWithItem("rotten_acacia_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_BUTTON = registerBlockWithItem("rotten_acacia_button",
-            () -> new ButtonBlock(BlockSetType.ACACIA, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_PRESSURE_PLATE = registerBlockWithItem("rotten_acacia_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_SLAB = registerBlockWithItem("rotten_acacia_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_STAIRS = registerBlockWithItem("rotten_acacia_stairs",
-            () -> new StairBlock(ROTTEN_ACACIA_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_FENCE = registerBlockWithItem("rotten_acacia_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_FENCE_GATE = registerBlockWithItem("rotten_acacia_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_DOOR = registerBlockWithItem("rotten_acacia_door",
-            () -> new DoorBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_ACACIA_TRAPDOOR = registerBlockWithItem("rotten_acacia_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.ACACIA, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_LOG = registerBlock("rotten_acacia_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_ACACIA_LOG = registerBlock("stripped_rotten_acacia_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_WOOD = registerBlock("rotten_acacia_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_ACACIA_WOOD = registerBlock("stripped_rotten_acacia_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_PLANKS = registerBlock("rotten_acacia_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_BUTTON = registerBlock("rotten_acacia_button",
+            (properties) -> new ButtonBlock(BlockSetType.ACACIA, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_PRESSURE_PLATE = registerBlock("rotten_acacia_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.ACACIA,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_SLAB = registerBlock("rotten_acacia_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_STAIRS = registerBlock("rotten_acacia_stairs",
+            (properties) -> new StairBlock(Blocks.ACACIA_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_FENCE = registerBlock("rotten_acacia_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_FENCE_GATE = registerBlock("rotten_acacia_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_DOOR = registerBlock("rotten_acacia_door",
+            (properties) -> new DoorBlock(BlockSetType.ACACIA,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_ACACIA_TRAPDOOR = registerBlock("rotten_acacia_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.ACACIA,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Bamboo
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_PLANKS = registerBlockWithItem("rotten_bamboo_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_BUTTON = registerBlockWithItem("rotten_bamboo_button",
-            () -> new ButtonBlock(BlockSetType.OAK, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_PRESSURE_PLATE = registerBlockWithItem("rotten_bamboo_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_SLAB = registerBlockWithItem("rotten_bamboo_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_STAIRS = registerBlockWithItem("rotten_bamboo_stairs",
-            () -> new StairBlock(ROTTEN_BAMBOO_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_FENCE = registerBlockWithItem("rotten_bamboo_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_FENCE_GATE = registerBlockWithItem("rotten_bamboo_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_DOOR = registerBlockWithItem("rotten_bamboo_door",
-            () -> new DoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_BAMBOO_TRAPDOOR = registerBlockWithItem("rotten_bamboo_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_PLANKS = registerBlock("rotten_bamboo_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_BUTTON = registerBlock("rotten_bamboo_button",
+            (properties) -> new ButtonBlock(BlockSetType.OAK, 10, properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_PRESSURE_PLATE = registerBlock("rotten_bamboo_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.OAK,properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_SLAB = registerBlock("rotten_bamboo_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_STAIRS = registerBlock("rotten_bamboo_stairs",
+            (properties) -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_FENCE = registerBlock("rotten_bamboo_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_FENCE_GATE = registerBlock("rotten_bamboo_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_DOOR = registerBlock("rotten_bamboo_door",
+            (properties) -> new DoorBlock(BlockSetType.BAMBOO,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BAMBOO_TRAPDOOR = registerBlock("rotten_bamboo_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.BAMBOO,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Birch
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_LOG = registerBlockWithItem("rotten_birch_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_BIRCH_LOG = registerBlockWithItem("stripped_rotten_birch_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_BIRCH_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_WOOD = registerBlockWithItem("rotten_birch_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_BIRCH_WOOD = registerBlockWithItem("stripped_rotten_birch_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_BIRCH_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_PLANKS = registerBlockWithItem("rotten_birch_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_BUTTON = registerBlockWithItem("rotten_birch_button",
-            () -> new ButtonBlock(BlockSetType.BIRCH, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_PRESSURE_PLATE = registerBlockWithItem("rotten_birch_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_SLAB = registerBlockWithItem("rotten_birch_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_STAIRS = registerBlockWithItem("rotten_birch_stairs",
-            () -> new StairBlock(ROTTEN_BIRCH_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_FENCE = registerBlockWithItem("rotten_birch_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_FENCE_GATE = registerBlockWithItem("rotten_birch_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_DOOR = registerBlockWithItem("rotten_birch_door",
-            () -> new DoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_BIRCH_TRAPDOOR = registerBlockWithItem("rotten_birch_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_LOG = registerBlock("rotten_birch_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_BIRCH_LOG = registerBlock("stripped_rotten_birch_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_WOOD = registerBlock("rotten_birch_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_BIRCH_WOOD = registerBlock("stripped_rotten_birch_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_PLANKS = registerBlock("rotten_birch_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_BUTTON = registerBlock("rotten_birch_button",
+            (properties) -> new ButtonBlock(BlockSetType.BIRCH, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_PRESSURE_PLATE = registerBlock("rotten_birch_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.BIRCH,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_SLAB = registerBlock("rotten_birch_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_STAIRS = registerBlock("rotten_birch_stairs",
+            (properties) -> new StairBlock(Blocks.BIRCH_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_FENCE = registerBlock("rotten_birch_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_FENCE_GATE = registerBlock("rotten_birch_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_DOOR = registerBlock("rotten_birch_door",
+            (properties) -> new DoorBlock(BlockSetType.BIRCH,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_BIRCH_TRAPDOOR = registerBlock("rotten_birch_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.BIRCH,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Cherry
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_LOG = registerBlockWithItem("rotten_cherry_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_CHERRY_LOG = registerBlockWithItem("stripped_rotten_cherry_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_WOOD = registerBlockWithItem("rotten_cherry_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_CHERRY_WOOD = registerBlockWithItem("stripped_rotten_cherry_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_PLANKS = registerBlockWithItem("rotten_cherry_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_BUTTON = registerBlockWithItem("rotten_cherry_button",
-            () -> new ButtonBlock(BlockSetType.CHERRY, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_PRESSURE_PLATE = registerBlockWithItem("rotten_cherry_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_SLAB = registerBlockWithItem("rotten_cherry_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_STAIRS = registerBlockWithItem("rotten_cherry_stairs",
-            () -> new StairBlock(ROTTEN_CHERRY_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_FENCE = registerBlockWithItem("rotten_cherry_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_FENCE_GATE = registerBlockWithItem("rotten_cherry_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_DOOR = registerBlockWithItem("rotten_cherry_door",
-            () -> new DoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_CHERRY_TRAPDOOR = registerBlockWithItem("rotten_cherry_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_LOG = registerBlock("rotten_cherry_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_CHERRY_LOG = registerBlock("stripped_rotten_cherry_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_WOOD = registerBlock("rotten_cherry_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_CHERRY_WOOD = registerBlock("stripped_rotten_cherry_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_PLANKS = registerBlock("rotten_cherry_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_BUTTON = registerBlock("rotten_cherry_button",
+            (properties) -> new ButtonBlock(BlockSetType.CHERRY, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_PRESSURE_PLATE = registerBlock("rotten_cherry_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.CHERRY,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_SLAB = registerBlock("rotten_cherry_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_STAIRS = registerBlock("rotten_cherry_stairs",
+            (properties) -> new StairBlock(Blocks.CHERRY_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_FENCE = registerBlock("rotten_cherry_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_FENCE_GATE = registerBlock("rotten_cherry_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_DOOR = registerBlock("rotten_cherry_door",
+            (properties) -> new DoorBlock(BlockSetType.CHERRY,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_CHERRY_TRAPDOOR = registerBlock("rotten_cherry_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.CHERRY,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Dark oak
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_LOG = registerBlockWithItem("rotten_dark_oak_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_DARK_OAK_LOG = registerBlockWithItem("stripped_rotten_dark_oak_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_DARK_OAK_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_WOOD = registerBlockWithItem("rotten_dark_oak_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_DARK_OAK_WOOD = registerBlockWithItem("stripped_rotten_dark_oak_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_DARK_OAK_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_PLANKS = registerBlockWithItem("rotten_dark_oak_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_BUTTON = registerBlockWithItem("rotten_dark_oak_button",
-            () -> new ButtonBlock(BlockSetType.DARK_OAK, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_PRESSURE_PLATE = registerBlockWithItem("rotten_dark_oak_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_SLAB = registerBlockWithItem("rotten_dark_oak_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_STAIRS = registerBlockWithItem("rotten_dark_oak_stairs",
-            () -> new StairBlock(ROTTEN_DARK_OAK_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_FENCE = registerBlockWithItem("rotten_dark_oak_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_FENCE_GATE = registerBlockWithItem("rotten_dark_oak_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_DOOR = registerBlockWithItem("rotten_dark_oak_door",
-            () -> new DoorBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_TRAPDOOR = registerBlockWithItem("rotten_dark_oak_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_LOG = registerBlock("rotten_dark_oak_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_DARK_OAK_LOG = registerBlock("stripped_rotten_dark_oak_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_WOOD = registerBlock("rotten_dark_oak_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_DARK_OAK_WOOD = registerBlock("stripped_rotten_dark_oak_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_PLANKS = registerBlock("rotten_dark_oak_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_BUTTON = registerBlock("rotten_dark_oak_button",
+            (properties) -> new ButtonBlock(BlockSetType.DARK_OAK, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_PRESSURE_PLATE = registerBlock("rotten_dark_oak_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.DARK_OAK,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_SLAB = registerBlock("rotten_dark_oak_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_STAIRS = registerBlock("rotten_dark_oak_stairs",
+            (properties) -> new StairBlock(Blocks.DARK_OAK_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_FENCE = registerBlock("rotten_dark_oak_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_FENCE_GATE = registerBlock("rotten_dark_oak_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_DOOR = registerBlock("rotten_dark_oak_door",
+            (properties) -> new DoorBlock(BlockSetType.DARK_OAK,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_DARK_OAK_TRAPDOOR = registerBlock("rotten_dark_oak_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.DARK_OAK,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Jungle
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_LOG = registerBlockWithItem("rotten_jungle_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_JUNGLE_LOG = registerBlockWithItem("stripped_rotten_jungle_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_JUNGLE_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_WOOD = registerBlockWithItem("rotten_jungle_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_JUNGLE_WOOD = registerBlockWithItem("stripped_rotten_jungle_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_JUNGLE_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_PLANKS = registerBlockWithItem("rotten_jungle_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_BUTTON = registerBlockWithItem("rotten_jungle_button",
-            () -> new ButtonBlock(BlockSetType.JUNGLE, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_PRESSURE_PLATE = registerBlockWithItem("rotten_jungle_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.JUNGLE, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_SLAB = registerBlockWithItem("rotten_jungle_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_STAIRS = registerBlockWithItem("rotten_jungle_stairs",
-            () -> new StairBlock(ROTTEN_JUNGLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_FENCE = registerBlockWithItem("rotten_jungle_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_FENCE_GATE = registerBlockWithItem("rotten_jungle_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_DOOR = registerBlockWithItem("rotten_jungle_door",
-            () -> new DoorBlock(BlockSetType.JUNGLE, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_JUNGLE_TRAPDOOR = registerBlockWithItem("rotten_jungle_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.JUNGLE, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_LOG = registerBlock("rotten_jungle_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_JUNGLE_LOG = registerBlock("stripped_rotten_jungle_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_WOOD = registerBlock("rotten_jungle_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_JUNGLE_WOOD = registerBlock("stripped_rotten_jungle_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_PLANKS = registerBlock("rotten_jungle_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_BUTTON = registerBlock("rotten_jungle_button",
+            (properties) -> new ButtonBlock(BlockSetType.JUNGLE, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_PRESSURE_PLATE = registerBlock("rotten_jungle_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.JUNGLE,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_SLAB = registerBlock("rotten_jungle_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_STAIRS = registerBlock("rotten_jungle_stairs",
+            (properties) -> new StairBlock(Blocks.JUNGLE_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_FENCE = registerBlock("rotten_jungle_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_FENCE_GATE = registerBlock("rotten_jungle_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_DOOR = registerBlock("rotten_jungle_door",
+            (properties) -> new DoorBlock(BlockSetType.JUNGLE,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_JUNGLE_TRAPDOOR = registerBlock("rotten_jungle_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.JUNGLE,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Mangle
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_LOG = registerBlockWithItem("rotten_mangrove_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_MANGROVE_LOG = registerBlockWithItem("stripped_rotten_mangrove_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_MANGROVE_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_WOOD = registerBlockWithItem("rotten_mangrove_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_MANGROVE_WOOD = registerBlockWithItem("stripped_rotten_mangrove_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_MANGROVE_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_PLANKS = registerBlockWithItem("rotten_mangrove_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_BUTTON = registerBlockWithItem("rotten_mangrove_button",
-            () -> new ButtonBlock(BlockSetType.MANGROVE, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_PRESSURE_PLATE = registerBlockWithItem("rotten_mangrove_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.MANGROVE, BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_SLAB = registerBlockWithItem("rotten_mangrove_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_STAIRS = registerBlockWithItem("rotten_mangrove_stairs",
-            () -> new StairBlock(ROTTEN_MANGROVE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_FENCE = registerBlockWithItem("rotten_mangrove_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_FENCE_GATE = registerBlockWithItem("rotten_mangrove_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_DOOR = registerBlockWithItem("rotten_mangrove_door",
-            () -> new DoorBlock(BlockSetType.MANGROVE, BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_MANGROVE_TRAPDOOR = registerBlockWithItem("rotten_mangrove_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.MANGROVE, BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_LOG = registerBlock("rotten_mangrove_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_MANGROVE_LOG = registerBlock("stripped_rotten_mangrove_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_WOOD = registerBlock("rotten_mangrove_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_MANGROVE_WOOD = registerBlock("stripped_rotten_mangrove_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_PLANKS = registerBlock("rotten_mangrove_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_BUTTON = registerBlock("rotten_mangrove_button",
+            (properties) -> new ButtonBlock(BlockSetType.MANGROVE, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_PRESSURE_PLATE = registerBlock("rotten_mangrove_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.MANGROVE,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_SLAB = registerBlock("rotten_mangrove_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_STAIRS = registerBlock("rotten_mangrove_stairs",
+            (properties) -> new StairBlock(Blocks.MANGROVE_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_FENCE = registerBlock("rotten_mangrove_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_FENCE_GATE = registerBlock("rotten_mangrove_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_DOOR = registerBlock("rotten_mangrove_door",
+            (properties) -> new DoorBlock(BlockSetType.MANGROVE,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_MANGROVE_TRAPDOOR = registerBlock("rotten_mangrove_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.MANGROVE,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Spruce
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_LOG = registerBlockWithItem("rotten_spruce_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_SPRUCE_LOG = registerBlockWithItem("stripped_rotten_spruce_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_SPRUCE_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_WOOD = registerBlockWithItem("rotten_spruce_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_SPRUCE_WOOD = registerBlockWithItem("stripped_rotten_spruce_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_SPRUCE_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_PLANKS = registerBlockWithItem("rotten_spruce_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_BUTTON = registerBlockWithItem("rotten_spruce_button",
-            () -> new ButtonBlock(BlockSetType.SPRUCE, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_PRESSURE_PLATE = registerBlockWithItem("rotten_spruce_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.SPRUCE, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_SLAB = registerBlockWithItem("rotten_spruce_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_STAIRS = registerBlockWithItem("rotten_spruce_stairs",
-            () -> new StairBlock(ROTTEN_SPRUCE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_FENCE = registerBlockWithItem("rotten_spruce_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_FENCE_GATE = registerBlockWithItem("rotten_spruce_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_DOOR = registerBlockWithItem("rotten_spruce_door",
-            () -> new DoorBlock(BlockSetType.SPRUCE, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_SPRUCE_TRAPDOOR = registerBlockWithItem("rotten_spruce_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.SPRUCE, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_LOG = registerBlock("rotten_spruce_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_SPRUCE_LOG = registerBlock("stripped_rotten_spruce_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_WOOD = registerBlock("rotten_spruce_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_SPRUCE_WOOD = registerBlock("stripped_rotten_spruce_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_PLANKS = registerBlock("rotten_spruce_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_BUTTON = registerBlock("rotten_spruce_button",
+            (properties) -> new ButtonBlock(BlockSetType.SPRUCE, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_PRESSURE_PLATE = registerBlock("rotten_spruce_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.SPRUCE,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_SLAB = registerBlock("rotten_spruce_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_STAIRS = registerBlock("rotten_spruce_stairs",
+            (properties) -> new StairBlock(Blocks.SPRUCE_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_FENCE = registerBlock("rotten_spruce_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_FENCE_GATE = registerBlock("rotten_spruce_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_DOOR = registerBlock("rotten_spruce_door",
+            (properties) -> new DoorBlock(BlockSetType.SPRUCE,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_SPRUCE_TRAPDOOR = registerBlock("rotten_spruce_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.SPRUCE,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Oak
-    public static final DeferredBlock<Block> ROTTEN_OAK_LOG = registerBlockWithItem("rotten_oak_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_OAK_LOG = registerBlockWithItem("stripped_rotten_oak_log",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_WOOD = registerBlockWithItem("rotten_oak_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
-    public static final DeferredBlock<Block> STRIPPED_ROTTEN_OAK_WOOD = registerBlockWithItem("stripped_rotten_oak_wood",
-            () -> new RottenLogsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_PLANKS = registerBlockWithItem("rotten_oak_planks",
-            () -> new RottenPlanksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_BUTTON = registerBlockWithItem("rotten_oak_button",
-            () -> new ButtonBlock(BlockSetType.OAK, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_PRESSURE_PLATE = registerBlockWithItem("rotten_oak_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_SLAB = registerBlockWithItem("rotten_oak_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_STAIRS = registerBlockWithItem("rotten_oak_stairs",
-            () -> new StairBlock(ROTTEN_OAK_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_FENCE = registerBlockWithItem("rotten_oak_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)));
-    public static final DeferredBlock<Block> ROTTEN_OAK_FENCE_GATE = registerBlockWithItem("rotten_oak_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final DeferredBlock<Block> ROTTEN_OAK_DOOR = registerBlockWithItem("rotten_oak_door",
-            () -> new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).noOcclusion()));
-    public static final DeferredBlock<Block> ROTTEN_OAK_TRAPDOOR = registerBlockWithItem("rotten_oak_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR).noOcclusion()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_LOG = registerBlock("rotten_oak_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_OAK_LOG = registerBlock("stripped_rotten_oak_log",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_WOOD = registerBlock("rotten_oak_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_ROTTEN_OAK_WOOD = registerBlock("stripped_rotten_oak_wood",
+            (properties) -> new RottenLogsBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_PLANKS = registerBlock("rotten_oak_planks",
+            (properties) -> new RottenPlanksBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_BUTTON = registerBlock("rotten_oak_button",
+            (properties) -> new ButtonBlock(BlockSetType.OAK, 10,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_OAK_PRESSURE_PLATE = registerBlock("rotten_oak_pressure_plate",
+            (properties) -> new PressurePlateBlock(BlockSetType.OAK,properties.strength(2f)));
+    public static final DeferredBlock<Block> ROTTEN_OAK_SLAB = registerBlock("rotten_oak_slab",
+            (properties) -> new SlabBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_STAIRS = registerBlock("rotten_oak_stairs",
+            (properties) -> new StairBlock(Blocks.OAK_PLANKS.defaultBlockState(), properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_FENCE = registerBlock("rotten_oak_fence",
+            (properties) -> new FenceBlock(properties.strength(2f).ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_FENCE_GATE = registerBlock("rotten_oak_fence_gate",
+            (properties) -> new FenceGateBlock(properties.strength(2f).ignitedByLava(), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> ROTTEN_OAK_DOOR = registerBlock("rotten_oak_door",
+            (properties) -> new DoorBlock(BlockSetType.OAK,properties.strength(2f).noOcclusion().ignitedByLava()));
+    public static final DeferredBlock<Block> ROTTEN_OAK_TRAPDOOR = registerBlock("rotten_oak_trapdoor",
+            (properties) -> new TrapDoorBlock(BlockSetType.OAK,properties.strength(2f).noOcclusion().ignitedByLava()));
 
     //Helper methods
-    private static <T extends Block> DeferredBlock<T> registerBlockWithItem(String name, Supplier<T> block){
-        DeferredBlock<T> ToReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, ToReturn);
-        return ToReturn;
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
+        DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
+        registerBlockItem(name, toReturn);
+        return toReturn;
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        BLOCK_ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        BLOCK_ITEMS.registerSimpleBlockItem(name, block);
     }
 
     public static void register(IEventBus eventBus){
-        BLOCKS.register(eventBus);
         BLOCK_ITEMS.register(eventBus);
+        BLOCKS.register(eventBus);
     }
 }

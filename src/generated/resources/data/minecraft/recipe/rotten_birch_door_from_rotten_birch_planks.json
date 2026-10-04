@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": {
-      "item": "rotten_planks_and_logs:rotten_birch_planks"
-    }
+    "#": "rotten_planks_and_logs:rotten_birch_planks"
   },
   "pattern": [
     "##",

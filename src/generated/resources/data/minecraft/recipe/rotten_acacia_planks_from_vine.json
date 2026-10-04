@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:acacia_planks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:acacia_planks",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

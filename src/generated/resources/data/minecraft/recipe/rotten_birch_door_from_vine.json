@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:birch_door"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:birch_door",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

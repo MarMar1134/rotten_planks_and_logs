@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_trapdoor"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:mangrove_trapdoor",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

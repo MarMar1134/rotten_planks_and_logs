@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:mangrove_wood"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:mangrove_wood",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

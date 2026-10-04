@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "W": {
-      "item": "rotten_planks_and_logs:rotten_oak_planks"
-    }
+    "#": "minecraft:stick",
+    "W": "rotten_planks_and_logs:rotten_oak_planks"
   },
   "pattern": [
     "W#W",

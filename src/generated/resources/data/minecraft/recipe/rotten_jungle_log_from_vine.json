@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:jungle_log"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:jungle_log",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:dark_oak_button"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:dark_oak_button",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

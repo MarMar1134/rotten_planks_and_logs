@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:cherry_pressure_plate"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:cherry_pressure_plate",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

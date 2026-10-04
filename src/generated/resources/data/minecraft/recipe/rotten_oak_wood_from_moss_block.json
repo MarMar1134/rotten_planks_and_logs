@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:oak_wood"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:oak_wood",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

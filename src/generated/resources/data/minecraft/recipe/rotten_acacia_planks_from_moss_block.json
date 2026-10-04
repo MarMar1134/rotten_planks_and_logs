@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:acacia_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:acacia_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

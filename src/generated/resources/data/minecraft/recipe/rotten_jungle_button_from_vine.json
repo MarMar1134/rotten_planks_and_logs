@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:jungle_button"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:jungle_button",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,
